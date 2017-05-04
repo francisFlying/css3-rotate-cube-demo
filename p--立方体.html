@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid #000;*/
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            /*transform:rotateX(31deg) rotateY(-35deg);*/
+
+            animation: roll 10s linear infinite;
+        }
+        .box div{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+        }
+        .circle1{
+            border-radius: 50%;
+            background-color: rgba(255,0,0,0.6)
+        }
+        .circle2{
+            border-radius: 50%;
+            transform: rotateX(90deg);
+            background-color: rgba(255,0,0,0.6);
+        }
+        .circle3{
+            border-radius: 50%;
+            transform: rotateX(135deg);
+            background-color: rgba(255,0,0,0.6);
+        }
+        .circle4{
+            border-radius: 50%;
+            transform: rotateX(45deg);
+            background-color: rgba(255,0,0,0.6);
+        }
+        .circle5{
+            border-radius: 50%;
+            transform: rotateY(90deg);
+            background-color: rgba(0,0,255,0.6);
+        }
+        .circle6{
+            border-radius: 50%;
+            transform: rotateY(135deg);
+            background-color: rgba(0,0,255,0.6);
+        }
+        .circle7{
+            border-radius: 50%;
+            transform: rotateY(45deg);
+            background-color: rgba(0,0,255,0.6);
+        }
+        .circle8{
+            border-radius: 50%;
+            transform: rotateY(180deg);
+            background-color: rgba(0,0,255,0.6);
+        }
+        .forward{
+            transform:translateZ(-100px);
+            background-color: rgba(255,0,0,0.5);
+        }
+       .back{
+            transform:translateZ(100px);
+            background-color: rgba(0,255,0,0.5);
+        }
+         .up{
+            transform:translateY(-100px) rotateX(-90deg);
+            background-color: rgba(0,0,255,0.5);
+        }
+        .down{
+            transform:translateY(100px) rotateX(90deg);
+            background-color: rgba(0,0,255,0.5);
+        }
+        .left{
+            transform:translateX(-100px) rotateY(-90deg);
+            background-color: rgba(66,45,255,0.5);
+        }
+         .right{
+             transform:translateX(100px) rotateY(90deg);
+             background-color: rgba(66,45,123,0.5);
+         }
+        @keyframes roll {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+    <div class="circle6"></div>
+    <div class="circle7"></div>
+    <div class="circle8"></div>
+    <div class="forward">forward</div>
+    <div class="back">back</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="up">up</div>
+    <div class="down">down</div>
+</div>
+
+</body>
+</html>
